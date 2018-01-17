@@ -21,7 +21,7 @@ int main() {
 
     std::cout << "============================BREAK=============================" << std::endl;
 
-    for(int i = 0; i < data.size(); i += 1) {
+    for(unsigned int i = 0; i < data.size(); i += 1) {
         std::cout << data.at(i).at("What is your name?") << std::endl;
     }
 

@@ -57,7 +57,7 @@ void CsvReader::read(std::function<void (std::map<std::string, std::string>)> ca
     while (getline(file, line)) {
         rowdata = this->split(line, ",", "\"");
 
-        int i = 0;
+        unsigned int i = 0;
         while (i < headerscount) {
             map[headers[i]] = rowdata[i];
             i += 1;
