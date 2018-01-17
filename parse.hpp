@@ -6,7 +6,6 @@ enum class PlayFrequency { EVERY_YEAR, EVERY_SIX_MONTHS, EVERY_FOUR_MONTHS, EVER
 
 class PlayerData {
     public:
-
         std::string name;
         std::string email;
         int perceived_skill;
@@ -20,7 +19,6 @@ class PlayerData {
 
 class PlayerDataParser {
     public:
-        PlayerDataParser();
         PlayerData parse(std::map<std::string, std::string> map);
     private:
         PlayFrequency parse_frequency(std::string s);

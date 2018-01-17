@@ -6,7 +6,6 @@
 #include "value_map.cpp"
 #include "parse.hpp"
 
-PlayerDataParser::PlayerDataParser() {}
 
 PlayerData PlayerDataParser::parse(std::map<std::string, std::string> map) {
   PlayerData player_data = PlayerData();
@@ -21,7 +20,6 @@ PlayerData PlayerDataParser::parse(std::map<std::string, std::string> map) {
   player_data.owns_equipment = stoi(map[K_OWN_EQUIPMENT], nullptr);
   return player_data;
 }
-
 
 PlayFrequency PlayerDataParser::parse_frequency(std::string s) {
     std::unordered_map<std::string, PlayFrequency> map ({
