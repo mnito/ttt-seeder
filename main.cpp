@@ -1,8 +1,9 @@
 #include <iostream>
 #include <map>
 #include <vector>
+
 #include "read.hpp"
-#include "seed.hpp"
+#include "parse.hpp"
 
 int main() {
     std::vector<std::map <std::string, std::string> > data;
