@@ -13,6 +13,7 @@ int main(int argc, char** argv) {
         std::cout << "Usage: " << argv[0] << " <data file>" << std::endl;
         exit(0);
     }
+
     std::vector<std::map <std::string, std::string> > data;
     PlayerDataParser parser = PlayerDataParser();
     PlayerScorer scorer = PlayerScorer();
