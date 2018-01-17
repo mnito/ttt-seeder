@@ -8,14 +8,18 @@
 #include "score.hpp"
 
 
-int main() {
+int main(int argc, char** argv) {
+    if (argc < 2) {
+        std::cout << "Usage: " << argv[0] << " <data file>" << std::endl;
+        exit(0);
+    }
     std::vector<std::map <std::string, std::string> > data;
     PlayerDataParser parser = PlayerDataParser();
     PlayerScorer scorer = PlayerScorer();
     std::vector<PlayerScore> playerscores;
 
     try {
-        CsvReader reader = CsvReader("data.csv");
+        CsvReader reader = CsvReader(std::string(argv[1]));
         data = reader.read();
         reader.read( [&parser, &scorer, &playerscores](std::map<std::string, std::string> row) {
             PlayerData player = parser.parse(row);
