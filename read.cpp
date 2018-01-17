@@ -1,6 +1,7 @@
 #include <fstream>
 #include <map>
 #include <vector>
+#include <functional>
 
 #include "read.hpp"
 
